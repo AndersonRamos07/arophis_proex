@@ -23,4 +23,24 @@ router.get('/:id', (req, res, next) =>{
     }
 });
 
+router.post('/', (req, res, next) =>{
+    var i = 0;
+    const usuario = {
+        id: i,
+        nome: req.body.nome,
+        sobrenome: req.body.sobrenome
+    };
+    if(usuario.nome != null && usuario.nome != '' && usuario.nome != undefined){
+        res.status(201).send({
+            mensagem: 'Usuário Cadastrado!',
+            usuarioCriado: usuario
+        })
+    } else{
+        res.status(404).send({
+            mensagem: 'Não foi possível cadastrar o usuário!'
+        }) 
+    }
+
+})
+
 module.exports = router;
