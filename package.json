@@ -1,0 +1,16 @@
+{
+  "name": "arophis_proex",
+  "version": "1.0.0",
+  "description": "Uma sugestao de App para a PROEX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Anderson Ramos 07",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
+  }
+}
