@@ -9,14 +9,11 @@ http.use((req, res, next) =>{
         'Access-Control-Allow-Header',
         'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     );
-
     if(req.method === 'options'){
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH');
         return res.status(200).send({});
-    }
-    next();
-})
-
+    }   next();
+});
 
 http.use(bodyParser.urlencoded({extended: false}));
 http.use(bodyParser.json())

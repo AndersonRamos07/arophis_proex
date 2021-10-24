@@ -24,9 +24,9 @@ router.get('/:id', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
-    var i = 0;
+    var data = new Date;
     const usuario = {
-        id: i,
+        id: data,
         nome: req.body.nome,
         sobrenome: req.body.sobrenome
     };
@@ -35,6 +35,7 @@ router.post('/', (req, res, next) =>{
             mensagem: 'Usuário Cadastrado!',
             usuarioCriado: usuario
         })
+        i++
     } else{
         res.status(404).send({
             mensagem: 'Não foi possível cadastrar o usuário!'
