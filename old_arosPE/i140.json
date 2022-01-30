@@ -1,0 +1,114 @@
+{
+    "i140":
+    {
+        "part1":
+        [{
+            "aboutPerson":
+            {
+                "lastName": "Sobrenome(s)",
+                "firstName": "Nome",
+                "middleName": "sfc"
+            },
+            "maillingAddress":
+            {
+                "inCareOfName":"Nome Completo",
+                "streetNumberName": "Numero e Nome da rua",
+                "aptSteFlr": "sfc",
+                "cityOrTown": "Cidade",
+                "state": "Estado",
+                "zipCode": "12345",
+                "province": "Se for BR",
+                "postalCode": "Se for BR",
+                "country": "USA"
+            },
+            "otherInformation":
+            {
+                "irsein":"sfc",
+                "ssn":"se tiver Social Security",
+                "uscis": "sfc"
+            }
+        }],
+        "part2":
+        [{
+            "petitionType":
+            {
+                "um.h":true
+            }
+        }],
+        "part3":
+        [{
+            "personFiling":
+            {
+                "lastName": "Sobrenome(s)",
+                "firstName": "Nome",
+                "middleName": "sfc"
+            },
+            "otherInformation":
+            {
+                "dateOfBirth": "MM/DD/YYYY",
+                "cityTownVillageOfBirth": "Cidade",
+                "stateOrProvinceOfBirth": "Estado",
+                "countryOfBirth": "Brazil",
+                "countryOfCitizenshipOrNationality": "Brazil",
+                "ssn":"se tiver Social Security"
+            },
+            "informationArrivalInTheUSA":
+            {
+                "dateOfArrival": "MM/DD/YYYY",
+                "formI-94": "123456789A0",
+                "expirationDateOfAuthorized": "MM/DD/YYYY",
+                "statusOnFormI-94": "F1",
+                "passportNumber": "BR123456",
+                "countryOfIssuance": "Brazil",
+                "expirationDateForPassport": "MM/DD/YYYY"
+            }
+        }],
+        "part4":
+        [{
+            "processingInformation":
+            {
+                "dois-a":true,
+                "dois-b": "Brazil",
+                "streetNumberName": "Numero e Nome da rua",
+                "aptSteFlr": "sfc",
+                "cityOrTown": "Cidade",
+                "province": "Se for BR",
+                "postalCode": "Se for BR",
+                "country": "BRAZIL"
+            },
+            "maillingAddress":
+            {
+                "inCareOfName": "Nome Completo",
+                "streetNumberName": "Numero e Nome da rua",
+                "aptSteFlr": "sfc",
+                "cityOrTown": "Cidade",
+                "province": "Se for BR",
+                "postalCode": "Se for BR",
+                "country": "USA",
+                "seis-a-FormI-140": true,
+                "seis-b-FormI-485": true,
+                "seis-b-FormI-131": true,
+                "seis-b-FormI-765": true,
+                "seteADez": false
+            }
+        }],
+        "part5":
+        [{
+            "um-bSelf": true
+        }],
+        "part6":
+        [{
+            "jobTitle": "Verificar na OMNET",
+            "socCode": "00-0000",
+            "nontechnicalJobDescription": "textão",
+            "fullTimePosition": true,
+            "permanentPosition": true,
+            "newPosition": false,
+            "wages": "$porYear",
+            "worsiteLocation":
+            {
+                
+            }
+        }]
+    }
+}
