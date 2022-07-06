@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anderson Ramos" />
+    <meta name="description" content="APP's Main FrontEnd" />
+    <title>Início</title>
+</head>
+<body>
+    <button onclick="toLogin()">Login</button>
+    <button onclick="toIndex()">Index</button>
+
+    <script>
+        const semIndex = () =>{
+            let url = location.href;
+            let semIndex = url.replace("/inicio", "/")
+            return semIndex;
+        }
+        const redirecionar = (onde) =>{
+            let agora = semIndex();
+            let redirecionado = agora + onde;
+            return location.href = redirecionado;
+        }
+        const toLogin = () => redirecionar('login');
+        const toIndex = () => redirecionar('index');
+    </script>
+</body>
+</html>

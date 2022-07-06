@@ -1,37 +1,29 @@
 const express = require('express');
+const path = require('path');
+const res = require('express/lib/response');
 const http = express();
-const User = require('./routers/users');
-const bodyParser = require('body-parser');
 
-//  CORS
-http.use((req, res, next) =>{
-    res.header(
-        'Access-Control-Allow-Header',
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-    );
-    if(req.method === 'options'){
-        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH');
-        return res.status(200).send({});
-    }   next();
-});
+//const rotaUsers = require('./routes/users');
 
-http.use(bodyParser.urlencoded({extended: false}));
-http.use(bodyParser.json())
-http.use('/user', User);
+//http.use('/users', rotaUsers);
 
-http.use((req, res, next) =>{
-    const erro = new Error('Não encontrado!');
-    erro.status = 404;
-    next(erro);
-});
-
-http.use((error, req, res, next) =>{
-    res.status(error.status || 500);
-    return res.send({
-        erro: {
-            mensagem: error.message
-        }
-    })
+http.get('/', (req, res) =>{
+    res.sendFile(path.join(__dirname+'/public/html/index.html'))
+//    res.send('Startando outro...')
 })
 
-http.listen(9000);
+http.get('/login', (req, res) =>{
+    res.sendFile(path.join(__dirname+'/public/html/login.html'))
+})
+
+http.get('/index', (req, res) =>{
+    res.sendFile(path.join(__dirname+'/public/js/index.html'))
+})
+
+http.get('/inicio', (req, res) =>{
+    res.sendFile(path.join(__dirname+'/public/html/index.html'))
+})
+
+http.listen(9000, () => {
+    console.log('Servidor rodando com o <http> ' + 'http://localhost:9000/');
+});
